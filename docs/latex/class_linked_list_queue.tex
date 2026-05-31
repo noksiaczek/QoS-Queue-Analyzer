@@ -1,0 +1,120 @@
+\doxysection{Dokumentacja klasy Linked\+List\+Queue}
+\hypertarget{class_linked_list_queue}{}\label{class_linked_list_queue}\index{LinkedListQueue@{LinkedListQueue}}
+
+
+Klasa symulująca kolejkę priorytetową przy użyciu listy jednokierunkowej. Implementacja służy jako wariant referencyjny (Narzędzie B) do testów wydajnościowych algorytmów QoS.  
+
+
+
+
+{\ttfamily \+\#include $<$Linked\+List\+Queue.\+h$>$}
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_linked_list_queue_a489e2307831d46bba18c28ba7223fef1}{Linked\+List\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny, inicjalizuje pustą listę. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_linked_list_queue_a14cf2b65033bf3632155d362613ed93c}{\texorpdfstring{$\sim$}{\string~}\+Linked\+List\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor, zwalnia pamięć wszystkich węzłów listy, zapobiegając wyciekom. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy lista jest pusta. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linked_list_queue_a2775891bdcb9e32b3f7ddbdd85e35f24}{insert}} (const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \&packet)
+\begin{DoxyCompactList}\small\item\em Wstawia nowy pakiet na początek listy (dopinanie do głowy). Złożoność czasowa operacji wynosi O(1). \end{DoxyCompactList}\item 
+const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \& \doxymbox{\hyperlink{class_linked_list_queue_a24168c8c5a45014bfe2f32b2892ff3f8}{front}} () const
+\begin{DoxyCompactList}\small\item\em Przeszukuje listę i zwraca pakiet o najwyższym priorytecie (najmniejszej wartości). Złożoność czasowa operacji wynosi O(\+N). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_linked_list_queue_a815fae5f941c146bf0575d313a4a36ba}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Usuwa z listy pakiet o najwyższym priorytecie. Złożoność czasowa operacji wynosi O(\+N). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa symulująca kolejkę priorytetową przy użyciu listy jednokierunkowej. Implementacja służy jako wariant referencyjny (Narzędzie B) do testów wydajnościowych algorytmów QoS. 
+
+\label{class_linked_list_queue_doc-constructors}
+\Hypertarget{class_linked_list_queue_doc-constructors}
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_linked_list_queue_a489e2307831d46bba18c28ba7223fef1}\index{LinkedListQueue@{LinkedListQueue}!LinkedListQueue@{LinkedListQueue}}
+\index{LinkedListQueue@{LinkedListQueue}!LinkedListQueue@{LinkedListQueue}}
+\doxysubsubsection{\texorpdfstring{LinkedListQueue()}{LinkedListQueue()}}
+{\footnotesize\ttfamily \label{class_linked_list_queue_a489e2307831d46bba18c28ba7223fef1} 
+Linked\+List\+Queue::\+\+Linked\+List\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor domyślny, inicjalizuje pustą listę. 
+
+\Hypertarget{class_linked_list_queue_a14cf2b65033bf3632155d362613ed93c}\index{LinkedListQueue@{LinkedListQueue}!````~LinkedListQueue@{\texorpdfstring{$\sim$}{\string~}LinkedListQueue}}
+\index{````~LinkedListQueue@{\texorpdfstring{$\sim$}{\string~}LinkedListQueue}!LinkedListQueue@{LinkedListQueue}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LinkedListQueue()}{\string~LinkedListQueue()}}
+{\footnotesize\ttfamily \label{class_linked_list_queue_a14cf2b65033bf3632155d362613ed93c} 
+Linked\+List\+Queue::\+\texorpdfstring{$\sim$}{\string~}\+Linked\+List\+Queue (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destruktor, zwalnia pamięć wszystkich węzłów listy, zapobiegając wyciekom. 
+
+
+
+\label{class_linked_list_queue_doc-func-members}
+\Hypertarget{class_linked_list_queue_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1}\index{LinkedListQueue@{LinkedListQueue}!empty@{empty}}
+\index{empty@{empty}!LinkedListQueue@{LinkedListQueue}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1} 
+bool Linked\+List\+Queue::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sprawdza, czy lista jest pusta. 
+
+\begin{DoxyReturn}{Zwraca}
+true jeśli lista nie zawiera żadnych węzłów, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_linked_list_queue_a24168c8c5a45014bfe2f32b2892ff3f8}\index{LinkedListQueue@{LinkedListQueue}!front@{front}}
+\index{front@{front}!LinkedListQueue@{LinkedListQueue}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily \label{class_linked_list_queue_a24168c8c5a45014bfe2f32b2892ff3f8} 
+const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \& Linked\+List\+Queue::\+front (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Przeszukuje listę i zwraca pakiet o najwyższym priorytecie (najmniejszej wartości). Złożoność czasowa operacji wynosi O(\+N). 
+
+\begin{DoxyReturn}{Zwraca}
+const \doxylink{struct_network_packet}{Network\+Packet}\& Referencja do pakietu o najwyższym priorytecie. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em std::\+runtime\+\_\+error} & Wyrzuca wyjątek, jeśli funkcja zostanie wywołana na pustej liście. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_linked_list_queue_a2775891bdcb9e32b3f7ddbdd85e35f24}\index{LinkedListQueue@{LinkedListQueue}!insert@{insert}}
+\index{insert@{insert}!LinkedListQueue@{LinkedListQueue}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_linked_list_queue_a2775891bdcb9e32b3f7ddbdd85e35f24} 
+void Linked\+List\+Queue::\+insert (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \&}]{packet}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wstawia nowy pakiet na początek listy (dopinanie do głowy). Złożoność czasowa operacji wynosi O(1). 
+
+
+\begin{DoxyParams}{Parametry}
+{\em packet} & Obiekt pakietu gotowy do dodania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_linked_list_queue_a815fae5f941c146bf0575d313a4a36ba}\index{LinkedListQueue@{LinkedListQueue}!pop@{pop}}
+\index{pop@{pop}!LinkedListQueue@{LinkedListQueue}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{class_linked_list_queue_a815fae5f941c146bf0575d313a4a36ba} 
+void Linked\+List\+Queue::\+pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Usuwa z listy pakiet o najwyższym priorytecie. Złożoność czasowa operacji wynosi O(\+N). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z pliku:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_linked_list_queue_8h}{Linked\+List\+Queue.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\doxysection{Dokumentacja pliku src/\+main.cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$random$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+{\ttfamily \+\#include "{}../\+include/\+\+Min\+Heap\+Queue.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+include/\+\+Linked\+List\+Queue.\+h"{}}\newline
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a14712de00b7e2383197179b9437e062a}{run\+Qo\+SSimulation}} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia interaktywną symulację działania routera QoS. Generuje losowy ruch sieciowy z uwzględnieniem priorytetów (1-\/10) i prezentuje proces obsługi najważniejszych pakietów z wykorzystaniem kopca minimalnego. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a39e129f6fb1f8a65b75230069502907d}{run\+Benchmark}} ()
+\begin{DoxyCompactList}\small\item\em Przeprowadza testy wydajnościowe porównujące Min-\/\+Heap oraz Listę jednokierunkową. Mierzy czas wstawiania i usuwania elementów (od 1000 do 100000) w mikrosekundach. Zapisuje wyniki do pliku results.\+csv i wywołuje skrypt wizualizacyjny w Pythonie. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a5603cb2e90f372046c1303023f45a465}{show\+Graphs}} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia skrypt w Pythonie na podstawie już wygenerowanych danych. Oszczędza czas podczas prezentacji, pomijając ponowne przeliczanie. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Główna funkcja programu, obsługująca interaktywne menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{main_8cpp_doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Główna funkcja programu, obsługująca interaktywne menu. 
+
+\begin{DoxyReturn}{Zwraca}
+0 po poprawnym zakończeniu. 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a39e129f6fb1f8a65b75230069502907d}\index{main.cpp@{main.cpp}!runBenchmark@{runBenchmark}}
+\index{runBenchmark@{runBenchmark}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{runBenchmark()}{runBenchmark()}}
+{\footnotesize\ttfamily \label{main_8cpp_a39e129f6fb1f8a65b75230069502907d} 
+void run\+Benchmark (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Przeprowadza testy wydajnościowe porównujące Min-\/\+Heap oraz Listę jednokierunkową. Mierzy czas wstawiania i usuwania elementów (od 1000 do 100000) w mikrosekundach. Zapisuje wyniki do pliku results.\+csv i wywołuje skrypt wizualizacyjny w Pythonie. 
+
+\Hypertarget{main_8cpp_a14712de00b7e2383197179b9437e062a}\index{main.cpp@{main.cpp}!runQoSSimulation@{runQoSSimulation}}
+\index{runQoSSimulation@{runQoSSimulation}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{runQoSSimulation()}{runQoSSimulation()}}
+{\footnotesize\ttfamily \label{main_8cpp_a14712de00b7e2383197179b9437e062a} 
+void run\+Qo\+SSimulation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Uruchamia interaktywną symulację działania routera QoS. Generuje losowy ruch sieciowy z uwzględnieniem priorytetów (1-\/10) i prezentuje proces obsługi najważniejszych pakietów z wykorzystaniem kopca minimalnego. 
+
+\Hypertarget{main_8cpp_a5603cb2e90f372046c1303023f45a465}\index{main.cpp@{main.cpp}!showGraphs@{showGraphs}}
+\index{showGraphs@{showGraphs}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{showGraphs()}{showGraphs()}}
+{\footnotesize\ttfamily \label{main_8cpp_a5603cb2e90f372046c1303023f45a465} 
+void show\+Graphs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Uruchamia skrypt w Pythonie na podstawie już wygenerowanych danych. Oszczędza czas podczas prezentacji, pomijając ponowne przeliczanie. 
+

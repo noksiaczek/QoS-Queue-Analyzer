@@ -1,0 +1,104 @@
+\doxysection{Dokumentacja klasy Min\+Heap\+Queue}
+\hypertarget{class_min_heap_queue}{}\label{class_min_heap_queue}\index{MinHeapQueue@{MinHeapQueue}}
+
+
+Klasa symulująca kolejkę priorytetową dla mechanizmów QoS.  
+
+
+
+
+{\ttfamily \+\#include $<$Min\+Heap\+Queue.\+h$>$}
+
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_min_heap_queue_aaacdf499bd335640632d02fed8b9b66e}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Usuwa najważniejszy pakiet z kolejki (symulacja wypuszczenia w sieć). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_min_heap_queue_a3306db301cf0c9a4c5630cc89646bda3}{insert}} (const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \&new\+Packet)
+\begin{DoxyCompactList}\small\item\em Dodaje nowy pakiet do kolejki i przywraca właściwości kopca (tonięcie/\+wypływanie). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_min_heap_queue_ab44a94dfb9b89689417885130389c768}{empty}} () const
+\item 
+const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \& \doxymbox{\hyperlink{class_min_heap_queue_a2306ca11b461d4a662e7251e8246856b}{front}} () const
+\begin{DoxyCompactList}\small\item\em Pobiera najważniejszy pakiet z kolejki bez jego usuwania. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_min_heap_queue_a97fbb37e79fd594eb75cba64406637be}{increase\+Key}} (int index, int new\+Prio)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa symulująca kolejkę priorytetową dla mechanizmów QoS. 
+
+
+\begin{DoxyItemize}
+\item Wykorzystuje strukturę kopca minimalnego (Min-\/\+Heap) do sortowania przychodzącego ruchu sieciowego. Gwarantuje, że pakiety krytyczne (np. routing, głos) opuszczą interfejs przed ruchem o niskim priorytecie (np. P2P, torrenty). 
+\end{DoxyItemize}
+
+\label{class_min_heap_queue_doc-func-members}
+\Hypertarget{class_min_heap_queue_doc-func-members}
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_min_heap_queue_ab44a94dfb9b89689417885130389c768}\index{MinHeapQueue@{MinHeapQueue}!empty@{empty}}
+\index{empty@{empty}!MinHeapQueue@{MinHeapQueue}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{class_min_heap_queue_ab44a94dfb9b89689417885130389c768} 
+bool Min\+Heap\+Queue::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+\Hypertarget{class_min_heap_queue_a2306ca11b461d4a662e7251e8246856b}\index{MinHeapQueue@{MinHeapQueue}!front@{front}}
+\index{front@{front}!MinHeapQueue@{MinHeapQueue}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily \label{class_min_heap_queue_a2306ca11b461d4a662e7251e8246856b} 
+const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \& Min\+Heap\+Queue::\+front (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+
+Pobiera najważniejszy pakiet z kolejki bez jego usuwania. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Zwraca}
+const \doxylink{struct_network_packet}{Network\+Packet}\& Referencja do pakietu o najwyższym priorytecie (na szczycie kopca). 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Wyjątki}
+{\em std::\+runtime\+\_\+error} & Wyrzuca wyjątek, jeśli spróbujemy odczytać z pustej kolejki. \\
+\hline
+\end{DoxyExceptions}
+
+\end{DoxyItemize}\Hypertarget{class_min_heap_queue_a97fbb37e79fd594eb75cba64406637be}\index{MinHeapQueue@{MinHeapQueue}!increaseKey@{increaseKey}}
+\index{increaseKey@{increaseKey}!MinHeapQueue@{MinHeapQueue}}
+\doxysubsubsection{\texorpdfstring{increaseKey()}{increaseKey()}}
+{\footnotesize\ttfamily \label{class_min_heap_queue_a97fbb37e79fd594eb75cba64406637be} 
+void Min\+Heap\+Queue::\+increase\+Key (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{new\+Prio}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_min_heap_queue_a3306db301cf0c9a4c5630cc89646bda3}\index{MinHeapQueue@{MinHeapQueue}!insert@{insert}}
+\index{insert@{insert}!MinHeapQueue@{MinHeapQueue}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_min_heap_queue_a3306db301cf0c9a4c5630cc89646bda3} 
+void Min\+Heap\+Queue::\+insert (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \&}]{new\+Packet}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje nowy pakiet do kolejki i przywraca właściwości kopca (tonięcie/\+wypływanie). 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parametry}
+{\em new\+Packet} & Obiekt pakietu gotowy do obsługi przez router. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_min_heap_queue_aaacdf499bd335640632d02fed8b9b66e}\index{MinHeapQueue@{MinHeapQueue}!pop@{pop}}
+\index{pop@{pop}!MinHeapQueue@{MinHeapQueue}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{class_min_heap_queue_aaacdf499bd335640632d02fed8b9b66e} 
+void Min\+Heap\+Queue::\+pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Usuwa najważniejszy pakiet z kolejki (symulacja wypuszczenia w sieć). 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\+\begin{DoxyCompactItemize}
+\item 
+include/\+\doxymbox{\hyperlink{_min_heap_queue_8h}{Min\+Heap\+Queue.\+h}}\item 
+src/\+\doxymbox{\hyperlink{_min_heap_queue_8cpp}{Min\+Heap\+Queue.\+cpp}}\end{DoxyCompactItemize}

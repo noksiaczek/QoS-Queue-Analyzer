@@ -1,0 +1,39 @@
+\doxysection{Min\+Heap\+Queue.\+h}
+\hypertarget{_min_heap_queue_8h_source}{}\label{_min_heap_queue_8h_source}\index{include/MinHeapQueue.h@{include/MinHeapQueue.h}}
+\doxymbox{\hyperlink{_min_heap_queue_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ kamil\ on\ 5/31/2026.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ QOS\_QUEUE\_ANALYZER\_MINHEAPQUEUE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ QOS\_QUEUE\_ANALYZER\_MINHEAPQUEUE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_network_packet}{NetworkPacket}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{struct_network_packet_a82e217811f61af7574e9c0fdf0f0abf5}{prio}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \doxymbox{\hyperlink{struct_network_packet_acb0944e687e8c6f091efb69c80edd6bd}{type}};\ \ \ }
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_min_heap_queue}{MinHeapQueue}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<NetworkPacket>\ heap;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ heapifyUp(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ heapifyDown(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_min_heap_queue_aaacdf499bd335640632d02fed8b9b66e}{pop}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_min_heap_queue_a3306db301cf0c9a4c5630cc89646bda3}{insert}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_network_packet}{NetworkPacket}}\ \&newPacket);}
+\DoxyCodeLine{00042\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_min_heap_queue_ab44a94dfb9b89689417885130389c768}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_network_packet}{NetworkPacket}}\&\ \doxymbox{\hyperlink{class_min_heap_queue_a2306ca11b461d4a662e7251e8246856b}{front}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_min_heap_queue_a97fbb37e79fd594eb75cba64406637be}{increaseKey}}\ (\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ newPrio);}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//QOS\_QUEUE\_ANALYZER\_MINHEAPQUEUE\_H}}
+
+\end{DoxyCode}

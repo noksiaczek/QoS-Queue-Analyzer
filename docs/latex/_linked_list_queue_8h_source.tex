@@ -1,0 +1,87 @@
+\doxysection{Linked\+List\+Queue.\+h}
+\hypertarget{_linked_list_queue_8h_source}{}\label{_linked_list_queue_8h_source}\index{include/LinkedListQueue.h@{include/LinkedListQueue.h}}
+\doxymbox{\hyperlink{_linked_list_queue_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ kamil\ on\ 5/31/2026.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ QOS\_QUEUE\_ANALYZER\_LINKEDLISTQUEUE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ QOS\_QUEUE\_ANALYZER\_LINKEDLISTQUEUE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_min_heap_queue_8h}{MinHeapQueue.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_linked_list_queue_a489e2307831d46bba18c28ba7223fef1}{LinkedListQueue}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }Node\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{struct_network_packet}{NetworkPacket}}\ data;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Node*\ next;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ Node*\ head;\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \doxymbox{\hyperlink{class_linked_list_queue_a489e2307831d46bba18c28ba7223fef1}{LinkedListQueue}}()\ :\ head(nullptr)\ \{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{class_linked_list_queue_a14cf2b65033bf3632155d362613ed93c}{\string~LinkedListQueue}}()\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!\doxymbox{\hyperlink{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1}{empty}}())\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ Node*\ temp\ =\ head;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ head-\/>next;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1}{empty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ head\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_linked_list_queue_a2775891bdcb9e32b3f7ddbdd85e35f24}{insert}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_network_packet}{NetworkPacket}}\&\ packet)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ head\ =\ \textcolor{keyword}{new}\ Node\{packet,\ head\};}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_network_packet}{NetworkPacket}}\&\ \doxymbox{\hyperlink{class_linked_list_queue_a24168c8c5a45014bfe2f32b2892ff3f8}{front}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1}{empty}}())\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Kolejka\ jest\ pusta"{}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ Node*\ curr\ =\ head;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ Node*\ minNode\ =\ head;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (curr\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (curr-\/>data.\doxymbox{\hyperlink{struct_network_packet_a82e217811f61af7574e9c0fdf0f0abf5}{prio}}\ <\ minNode-\/>data.\doxymbox{\hyperlink{struct_network_packet_a82e217811f61af7574e9c0fdf0f0abf5}{prio}})\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minNode\ =\ curr;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ curr\ =\ curr-\/>next;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ minNode-\/>data;}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_linked_list_queue_a815fae5f941c146bf0575d313a4a36ba}{pop}}()\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_linked_list_queue_a72bdeef09861e24f0e7aba4626e92ab1}{empty}}())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ Node*\ curr\ =\ head;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ Node*\ prev\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ Node*\ minNode\ =\ head;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ Node*\ minPrev\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (curr\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (curr-\/>data.\doxymbox{\hyperlink{struct_network_packet_a82e217811f61af7574e9c0fdf0f0abf5}{prio}}\ <\ minNode-\/>data.\doxymbox{\hyperlink{struct_network_packet_a82e217811f61af7574e9c0fdf0f0abf5}{prio}})\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minNode\ =\ curr;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minPrev\ =\ prev;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ prev\ =\ curr;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ curr\ =\ curr-\/>next;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (minPrev\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ head\ =\ minNode-\/>next;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ minPrev-\/>next\ =\ minNode-\/>next;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ minNode;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//QOS\_QUEUE\_ANALYZER\_LINKEDLISTQUEUE\_H}}
+
+\end{DoxyCode}

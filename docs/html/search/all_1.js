@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['analyzer_0',['QoS-Queue-Analyzer',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['architecture_5fid_1',['ARCHITECTURE_ID',['../_c_make_c_compiler_id_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID:&#160;CMakeCXXCompilerId.cpp']]]
+  ['front_0',['front',['../class_linked_list_queue.html#a24168c8c5a45014bfe2f32b2892ff3f8',1,'LinkedListQueue::front()'],['../class_min_heap_queue.html#a2306ca11b461d4a662e7251e8246856b',1,'MinHeapQueue::front()']]]
 ];

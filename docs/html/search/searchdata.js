@@ -1,36 +1,27 @@
 var indexSectionsWithContent =
 {
-  0: "_acdefhilmnpqrstv~",
+  0: "efilmnpt~",
   1: "lmn",
-  2: "v",
-  3: "clmrv",
-  4: "efilmprs~",
-  5: "cdfilmpt",
-  6: "_acdhps",
-  7: "aq"
+  2: "lm",
+  3: "efilp~",
+  4: "pt"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "namespaces",
-  3: "files",
-  4: "functions",
-  5: "variables",
-  6: "defines",
-  7: "pages"
+  2: "files",
+  3: "functions",
+  4: "variables"
 };
 
 var indexSectionLabels =
 {
-  0: "Wszystko",
-  1: "Klasy",
-  2: "Przestrzenie nazw",
-  3: "Pliki",
-  4: "Funkcje",
-  5: "Zmienne",
-  6: "Definicje",
-  7: "Strony"
+  0: "All",
+  1: "Classes",
+  2: "Files",
+  3: "Functions",
+  4: "Variables"
 };
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_0',['data',['../namespacevisualizer.html#a5dfdce14c0bda57a0fbb4a8aafc040df',1,'visualizer']]]
+  ['type_0',['type',['../struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd',1,'NetworkPacket']]]
 ];

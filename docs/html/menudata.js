@@ -23,34 +23,13 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Strona główna",url:"index.html"},
-{text:"Powiązane strony",url:"pages.html"},
-{text:"Przestrzenie nazw",url:"namespaces.html",children:[
-{text:"Lista przestrzeni nazw",url:"namespaces.html"},
-{text:"Składowe przestrzeni nazw",url:"namespacemembers.html",children:[
-{text:"Wszystko",url:"namespacemembers.html"},
-{text:"Zmienne",url:"namespacemembers_vars.html"}]}]},
-{text:"Klasy",url:"annotated.html",children:[
-{text:"Lista klas",url:"annotated.html"},
-{text:"Indeks klas",url:"classes.html"},
-{text:"Składowe klas",url:"functions.html",children:[
-{text:"Wszystko",url:"functions.html"},
-{text:"Funkcje",url:"functions_func.html"},
-{text:"Zmienne",url:"functions_vars.html"}]}]},
-{text:"Pliki",url:"files.html",children:[
-{text:"Lista plików",url:"files.html"},
-{text:"Składowe plików",url:"globals.html",children:[
-{text:"Wszystko",url:"globals.html",children:[
-{text:"_",url:"globals.html#index__5F"},
-{text:"a",url:"globals.html#index_a"},
-{text:"c",url:"globals.html#index_c"},
-{text:"d",url:"globals.html#index_d"},
-{text:"h",url:"globals.html#index_h"},
-{text:"i",url:"globals.html#index_i"},
-{text:"m",url:"globals.html#index_m"},
-{text:"p",url:"globals.html#index_p"},
-{text:"r",url:"globals.html#index_r"},
-{text:"s",url:"globals.html#index_s"}]},
-{text:"Funkcje",url:"globals_func.html"},
-{text:"Zmienne",url:"globals_vars.html"},
-{text:"Definicje",url:"globals_defs.html"}]}]}]}
+{text:"Main Page",url:"index.html"},
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html"},
+{text:"Functions",url:"functions_func.html"},
+{text:"Variables",url:"functions_vars.html"}]}]},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"}]}]}

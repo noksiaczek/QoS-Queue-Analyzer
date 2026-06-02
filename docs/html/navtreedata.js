@@ -25,40 +25,26 @@
 var NAVTREE =
 [
   [ "QoS Queue Analyzer", "index.html", [
-    [ "QoS-Queue-Analyzer", "md__r_e_a_d_m_e.html", null ],
-    [ "Przestrzenie nazw", "namespaces.html", [
-      [ "Lista przestrzeni nazw", "namespaces.html", "namespaces_dup" ],
-      [ "Składowe przestrzeni nazw", "namespacemembers.html", [
-        [ "Wszystko", "namespacemembers.html", null ],
-        [ "Zmienne", "namespacemembers_vars.html", null ]
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "Klasy", "annotated.html", [
-      [ "Lista klas", "annotated.html", "annotated_dup" ],
-      [ "Indeks klas", "classes.html", null ],
-      [ "Składowe klas", "functions.html", [
-        [ "Wszystko", "functions.html", null ],
-        [ "Funkcje", "functions_func.html", null ],
-        [ "Zmienne", "functions_vars.html", null ]
-      ] ]
-    ] ],
-    [ "Pliki", "files.html", [
-      [ "Lista plików", "files.html", "files_dup" ],
-      [ "Składowe plików", "globals.html", [
-        [ "Wszystko", "globals.html", null ],
-        [ "Funkcje", "globals_func.html", null ],
-        [ "Zmienne", "globals_vars.html", null ],
-        [ "Definicje", "globals_defs.html", null ]
-      ] ]
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_c_make_c_compiler_id_8c.html"
+"_linked_list_queue_8h.html"
 ];
 
-const SYNCONMSG = 'kliknij żeby wyłączyć pokazywanie otwartego elementu w drzewie zawartości';
-const SYNCOFFMSG = 'kliknij żeby włączyć pokazywanie otwartego elementu w drzewie zawartości';
-const LISTOFALLMEMBERS = 'Lista wszystkich składowych';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';

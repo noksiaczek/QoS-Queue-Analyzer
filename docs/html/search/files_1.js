@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linkedlistqueue_2eh_0',['LinkedListQueue.h',['../_linked_list_queue_8h.html',1,'']]]
+  ['minheapqueue_2eh_0',['MinHeapQueue.h',['../_min_heap_queue_8h.html',1,'']]]
 ];

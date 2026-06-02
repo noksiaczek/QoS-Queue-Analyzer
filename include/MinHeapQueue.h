@@ -39,6 +39,10 @@ public:
      * * @param newPacket Obiekt pakietu gotowy do obsługi przez router.
      */
     void insert(const NetworkPacket &newPacket);
+    /**
+     *  @brief Sprawdza, czy lista jest pusta
+     * @return True, jeśli lista jest pusta, False w przeciwnym wypadku
+     */
     [[nodiscard]] bool empty() const;
     /**
      * @brief Pobiera najważniejszy pakiet z kolejki bez jego usuwania.
@@ -46,6 +50,11 @@ public:
      * @throws std::runtime_error Wyrzuca wyjątek, jeśli spróbujemy odczytać z pustej kolejki.
      */
     [[nodiscard]] const NetworkPacket& front() const;
+    /**
+     * @brief Ustawia priorytet wybranego indeksu na nowy
+     * @param index index elementu, który ma zostać zmieniony
+     * @param newPrio priorytet, jaki chcemy ustawić.
+     */
     void increaseKey (int index, int newPrio);
 };
 

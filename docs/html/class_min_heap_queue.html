@@ -131,9 +131,11 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a3306db301cf0c9a4c5630cc89646bda3" id="r_a3306db301cf0c9a4c5630cc89646bda3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3306db301cf0c9a4c5630cc89646bda3">insert</a> (const <a class="el" href="struct_network_packet.html">NetworkPacket</a> &amp;newPacket)</td></tr>
 <tr class="memdesc:a3306db301cf0c9a4c5630cc89646bda3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje nowy pakiet do kolejki i przywraca właściwości kopca (tonięcie/wypływanie).  <br /></td></tr>
 <tr class="memitem:ab44a94dfb9b89689417885130389c768" id="r_ab44a94dfb9b89689417885130389c768"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab44a94dfb9b89689417885130389c768">empty</a> () const</td></tr>
+<tr class="memdesc:ab44a94dfb9b89689417885130389c768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza, czy lista jest pusta.  <br /></td></tr>
 <tr class="memitem:a2306ca11b461d4a662e7251e8246856b" id="r_a2306ca11b461d4a662e7251e8246856b"><td class="memItemLeft">const <a class="el" href="struct_network_packet.html">NetworkPacket</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a2306ca11b461d4a662e7251e8246856b">front</a> () const</td></tr>
 <tr class="memdesc:a2306ca11b461d4a662e7251e8246856b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera najważniejszy pakiet z kolejki bez jego usuwania.  <br /></td></tr>
 <tr class="memitem:a97fbb37e79fd594eb75cba64406637be" id="r_a97fbb37e79fd594eb75cba64406637be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a97fbb37e79fd594eb75cba64406637be">increaseKey</a> (int index, int newPrio)</td></tr>
+<tr class="memdesc:a97fbb37e79fd594eb75cba64406637be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia priorytet wybranego indeksu na nowy.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa symulująca kolejkę priorytetową dla mechanizmów QoS. </p>
@@ -163,6 +165,9 @@ Metody publiczne</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sprawdza, czy lista jest pusta. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>True, jeśli lista jest pusta, False w przeciwnym wypadku </dd></dl>
 
 </div>
 </div>
@@ -221,6 +226,15 @@ Metody publiczne</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Ustawia priorytet wybranego indeksu na nowy. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index elementu, który ma zostać zmieniony </td></tr>
+    <tr><td class="paramname">newPrio</td><td>priorytet, jaki chcemy ustawić. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

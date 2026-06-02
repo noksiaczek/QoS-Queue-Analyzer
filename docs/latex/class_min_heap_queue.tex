@@ -17,11 +17,11 @@ void \doxymbox{\hyperlink{class_min_heap_queue_aaacdf499bd335640632d02fed8b9b66e
 void \doxymbox{\hyperlink{class_min_heap_queue_a3306db301cf0c9a4c5630cc89646bda3}{insert}} (const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \&new\+Packet)
 \begin{DoxyCompactList}\small\item\em Dodaje nowy pakiet do kolejki i przywraca właściwości kopca (tonięcie/\+wypływanie). \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{class_min_heap_queue_ab44a94dfb9b89689417885130389c768}{empty}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy lista jest pusta. \end{DoxyCompactList}\item 
 const \doxymbox{\hyperlink{struct_network_packet}{Network\+Packet}} \& \doxymbox{\hyperlink{class_min_heap_queue_a2306ca11b461d4a662e7251e8246856b}{front}} () const
 \begin{DoxyCompactList}\small\item\em Pobiera najważniejszy pakiet z kolejki bez jego usuwania. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{class_min_heap_queue_a97fbb37e79fd594eb75cba64406637be}{increase\+Key}} (int index, int new\+Prio)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ustawia priorytet wybranego indeksu na nowy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Opis szczegółowy}
@@ -41,6 +41,13 @@ Klasa symulująca kolejkę priorytetową dla mechanizmów QoS.
 {\footnotesize\ttfamily \label{class_min_heap_queue_ab44a94dfb9b89689417885130389c768} 
 bool Min\+Heap\+Queue::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
 
+
+
+Sprawdza, czy lista jest pusta. 
+
+\begin{DoxyReturn}{Zwraca}
+True, jeśli lista jest pusta, False w przeciwnym wypadku 
+\end{DoxyReturn}
 \Hypertarget{class_min_heap_queue_a2306ca11b461d4a662e7251e8246856b}\index{MinHeapQueue@{MinHeapQueue}!front@{front}}
 \index{front@{front}!MinHeapQueue@{MinHeapQueue}}
 \doxysubsubsection{\texorpdfstring{front()}{front()}}
@@ -68,6 +75,17 @@ const \doxylink{struct_network_packet}{Network\+Packet}\& Referencja do pakietu 
 {\footnotesize\ttfamily \label{class_min_heap_queue_a97fbb37e79fd594eb75cba64406637be} 
 void Min\+Heap\+Queue::\+increase\+Key (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{new\+Prio}{}\end{DoxyParamCaption})}
 
+
+
+Ustawia priorytet wybranego indeksu na nowy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em index} & index elementu, który ma zostać zmieniony \\
+\hline
+{\em new\+Prio} & priorytet, jaki chcemy ustawić. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_min_heap_queue_a3306db301cf0c9a4c5630cc89646bda3}\index{MinHeapQueue@{MinHeapQueue}!insert@{insert}}
 \index{insert@{insert}!MinHeapQueue@{MinHeapQueue}}
 \doxysubsubsection{\texorpdfstring{insert()}{insert()}}

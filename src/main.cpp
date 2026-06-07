@@ -11,6 +11,13 @@
 #include "../include/LinkedListQueue.h"
 
 /**
+ * @file main.cpp
+ * @brief Główny plik programu symulującego działanie routera QoS.
+ * @author Kamil Gwozdek
+ * @date Maj 2026
+ */
+
+/**
  * @brief Uruchamia interaktywna symulacje dzialania routera QoS.
  * Generuje losowy ruch sieciowy, prezentuje stan kopca i proces obslugi pakietow.
  */

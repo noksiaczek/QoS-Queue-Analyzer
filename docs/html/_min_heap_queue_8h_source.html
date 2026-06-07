@@ -128,42 +128,70 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_min_heap_queu
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_network_packet.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_network_packet.html">NetworkPacket</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_network_packet.html#a82e217811f61af7574e9c0fdf0f0abf5">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_network_packet.html#a82e217811f61af7574e9c0fdf0f0abf5">prio</a>;           </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd">   17</a></span>    std::string <a class="code hl_variable" href="struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd">type</a>;   </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_network_packet.html">   16</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_network_packet.html">NetworkPacket</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_network_packet.html#a82e217811f61af7574e9c0fdf0f0abf5">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_network_packet.html#a82e217811f61af7574e9c0fdf0f0abf5">prio</a>;           </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd">   18</a></span>    std::string <a class="code hl_variable" href="struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd">type</a>;   </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_min_heap_queue.html">MinHeapQueue</a> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::vector&lt;NetworkPacket&gt; heap;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> heapifyUp(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> heapifyDown(<span class="keywordtype">int</span> index);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#aaacdf499bd335640632d02fed8b9b66e">   36</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#aaacdf499bd335640632d02fed8b9b66e">pop</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#a3306db301cf0c9a4c5630cc89646bda3">   41</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#a3306db301cf0c9a4c5630cc89646bda3">insert</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_network_packet.html">NetworkPacket</a> &amp;newPacket);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#ab44a94dfb9b89689417885130389c768">   46</a></span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_min_heap_queue.html#ab44a94dfb9b89689417885130389c768">empty</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#a2306ca11b461d4a662e7251e8246856b">   52</a></span>    [[nodiscard]] <span class="keyword">const</span> <a class="code hl_struct" href="struct_network_packet.html">NetworkPacket</a>&amp; <a class="code hl_function" href="class_min_heap_queue.html#a2306ca11b461d4a662e7251e8246856b">front</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#a97fbb37e79fd594eb75cba64406637be">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#a97fbb37e79fd594eb75cba64406637be">increaseKey</a> (<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> newPrio);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
-</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_min_heap_queue.html">MinHeapQueue</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    std::vector&lt;NetworkPacket&gt; heap;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> heapifyUp(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> heapifyDown(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#aaacdf499bd335640632d02fed8b9b66e">   37</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#aaacdf499bd335640632d02fed8b9b66e">pop</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#a3306db301cf0c9a4c5630cc89646bda3">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#a3306db301cf0c9a4c5630cc89646bda3">insert</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_network_packet.html">NetworkPacket</a> &amp;newPacket);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#ab44a94dfb9b89689417885130389c768">   51</a></span>    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_min_heap_queue.html#ab44a94dfb9b89689417885130389c768">empty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#a2306ca11b461d4a662e7251e8246856b">   60</a></span>    [[nodiscard]] <span class="keyword">const</span> <a class="code hl_struct" href="struct_network_packet.html">NetworkPacket</a>&amp; <a class="code hl_function" href="class_min_heap_queue.html#a2306ca11b461d4a662e7251e8246856b">front</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">//QOS_QUEUE_ANALYZER_MINHEAPQUEUE_H</span></div>
-<div class="ttc" id="aclass_min_heap_queue_html"><div class="ttname"><a href="class_min_heap_queue.html">MinHeapQueue</a></div><div class="ttdoc">Klasa symulująca kolejkę priorytetową dla mechanizmów QoS.</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:26</div></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#a97fbb37e79fd594eb75cba64406637be">   68</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#a97fbb37e79fd594eb75cba64406637be">increaseKey</a> (<span class="keywordtype">int</span> index, <span class="keywordtype">int</span> newPrio);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_min_heap_queue.html#aa9b9f6d32a98d54ff4725fbc1043f952">   78</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_min_heap_queue.html#aa9b9f6d32a98d54ff4725fbc1043f952">printTree</a>(<span class="keywordtype">int</span> index = 0, <span class="keywordtype">int</span> level = 0)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (index &gt;= heap.size()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_function" href="class_min_heap_queue.html#aa9b9f6d32a98d54ff4725fbc1043f952">printTree</a>(2 * index + 2, level + 1);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; level; i++) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;       &quot;</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;-&gt; [&quot;</span> &lt;&lt; heap[index].prio &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_function" href="class_min_heap_queue.html#aa9b9f6d32a98d54ff4725fbc1043f952">printTree</a>(2 * index + 1, level + 1);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif </span><span class="comment">//QOS_QUEUE_ANALYZER_MINHEAPQUEUE_H</span></div>
+<div class="ttc" id="aclass_min_heap_queue_html"><div class="ttname"><a href="class_min_heap_queue.html">MinHeapQueue</a></div><div class="ttdoc">Klasa symulująca kolejkę priorytetową dla mechanizmów QoS.</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:27</div></div>
 <div class="ttc" id="aclass_min_heap_queue_html_a2306ca11b461d4a662e7251e8246856b"><div class="ttname"><a href="class_min_heap_queue.html#a2306ca11b461d4a662e7251e8246856b">MinHeapQueue::front</a></div><div class="ttdeci">const NetworkPacket &amp; front() const</div><div class="ttdoc">Pobiera najważniejszy pakiet z kolejki bez jego usuwania.</div></div>
 <div class="ttc" id="aclass_min_heap_queue_html_a3306db301cf0c9a4c5630cc89646bda3"><div class="ttname"><a href="class_min_heap_queue.html#a3306db301cf0c9a4c5630cc89646bda3">MinHeapQueue::insert</a></div><div class="ttdeci">void insert(const NetworkPacket &amp;newPacket)</div><div class="ttdoc">Dodaje nowy pakiet do kolejki i przywraca właściwości kopca (tonięcie/wypływanie).</div></div>
 <div class="ttc" id="aclass_min_heap_queue_html_a97fbb37e79fd594eb75cba64406637be"><div class="ttname"><a href="class_min_heap_queue.html#a97fbb37e79fd594eb75cba64406637be">MinHeapQueue::increaseKey</a></div><div class="ttdeci">void increaseKey(int index, int newPrio)</div><div class="ttdoc">Ustawia priorytet wybranego indeksu na nowy.</div></div>
+<div class="ttc" id="aclass_min_heap_queue_html_aa9b9f6d32a98d54ff4725fbc1043f952"><div class="ttname"><a href="class_min_heap_queue.html#aa9b9f6d32a98d54ff4725fbc1043f952">MinHeapQueue::printTree</a></div><div class="ttdeci">void printTree(int index=0, int level=0) const</div><div class="ttdoc">Wyswietla aktualny stan kopca w formie poziomego drzewa w konsoli. Korzen znajduje sie z lewej strony...</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:78</div></div>
 <div class="ttc" id="aclass_min_heap_queue_html_aaacdf499bd335640632d02fed8b9b66e"><div class="ttname"><a href="class_min_heap_queue.html#aaacdf499bd335640632d02fed8b9b66e">MinHeapQueue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdoc">Usuwa najważniejszy pakiet z kolejki (symulacja wypuszczenia w sieć).</div></div>
 <div class="ttc" id="aclass_min_heap_queue_html_ab44a94dfb9b89689417885130389c768"><div class="ttname"><a href="class_min_heap_queue.html#ab44a94dfb9b89689417885130389c768">MinHeapQueue::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Sprawdza, czy lista jest pusta.</div></div>
-<div class="ttc" id="astruct_network_packet_html"><div class="ttname"><a href="struct_network_packet.html">NetworkPacket</a></div><div class="ttdoc">Struktura reprezentująca pojedynczy pakiet wpadający na interfejs routera.</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:15</div></div>
-<div class="ttc" id="astruct_network_packet_html_a82e217811f61af7574e9c0fdf0f0abf5"><div class="ttname"><a href="struct_network_packet.html#a82e217811f61af7574e9c0fdf0f0abf5">NetworkPacket::prio</a></div><div class="ttdeci">int prio</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:16</div></div>
-<div class="ttc" id="astruct_network_packet_html_acb0944e687e8c6f091efb69c80edd6bd"><div class="ttname"><a href="struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd">NetworkPacket::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:17</div></div>
+<div class="ttc" id="astruct_network_packet_html"><div class="ttname"><a href="struct_network_packet.html">NetworkPacket</a></div><div class="ttdoc">Struktura reprezentująca pojedynczy pakiet wpadający na interfejs routera.</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:16</div></div>
+<div class="ttc" id="astruct_network_packet_html_a82e217811f61af7574e9c0fdf0f0abf5"><div class="ttname"><a href="struct_network_packet.html#a82e217811f61af7574e9c0fdf0f0abf5">NetworkPacket::prio</a></div><div class="ttdeci">int prio</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:17</div></div>
+<div class="ttc" id="astruct_network_packet_html_acb0944e687e8c6f091efb69c80edd6bd"><div class="ttname"><a href="struct_network_packet.html#acb0944e687e8c6f091efb69c80edd6bd">NetworkPacket::type</a></div><div class="ttdeci">std::string type</div><div class="ttdef"><b>Definition</b> MinHeapQueue.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

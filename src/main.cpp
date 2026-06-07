@@ -33,7 +33,11 @@ void runQoSSimulation() {
     MinHeapQueue qosQueue;
 
     for (int i = 0; i < 10; ++i) {
-        system("cls");
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
 
         int randomPrio = (rand() % 10) + 1;
         int randomAppIndex = rand() % 2;
@@ -56,7 +60,11 @@ void runQoSSimulation() {
     std::this_thread::sleep_for(std::chrono::seconds(7));
 
     while (!qosQueue.empty()) {
-        system("cls");
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
 
         NetworkPacket topPacket = qosQueue.front();
         qosQueue.pop();

@@ -1,3 +1,10 @@
+/**
+* @file main.cpp
+ * @brief Główny plik programu symulującego działanie routera QoS.
+ * @author Kamil Gwozdek
+ * @date Maj 2026
+ */
+
 #include <iostream>
 #include <fstream>
 #include <chrono>
@@ -10,12 +17,7 @@
 #include "../include/MinHeapQueue.h"
 #include "../include/LinkedListQueue.h"
 
-/**
- * @file main.cpp
- * @brief Główny plik programu symulującego działanie routera QoS.
- * @author Kamil Gwozdek
- * @date Maj 2026
- */
+
 
 /**
  * @brief Uruchamia interaktywna symulacje dzialania routera QoS.

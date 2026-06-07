@@ -1,3 +1,10 @@
+/**
+* @file main.cpp
+ * @brief Główny plik programu symulującego działanie routera QoS.
+ * @author Kamil Gwozdek
+ * @date Maj 2026
+ */
+
 #include <iostream>
 #include <fstream>
 #include <chrono>
@@ -9,6 +16,8 @@
 #include <thread>
 #include "../include/MinHeapQueue.h"
 #include "../include/LinkedListQueue.h"
+
+
 
 /**
  * @brief Uruchamia interaktywna symulacje dzialania routera QoS.
@@ -33,7 +42,11 @@ void runQoSSimulation() {
     MinHeapQueue qosQueue;
 
     for (int i = 0; i < 10; ++i) {
-        std::cout << "\033[2J\033[1;1H";
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
 
         int randomPrio = (rand() % 10) + 1;
         int randomAppIndex = rand() % 2;
@@ -56,7 +69,11 @@ void runQoSSimulation() {
     std::this_thread::sleep_for(std::chrono::seconds(7));
 
     while (!qosQueue.empty()) {
-        std::cout << "\033[2J\033[1;1H";
+        #ifdef _WIN32
+            system("cls");
+        #else
+            system("clear");
+        #endif
 
         NetworkPacket topPacket = qosQueue.front();
         qosQueue.pop();
@@ -110,17 +127,20 @@ void runBenchmark() {
         long long heapInsertTime = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
         start = std::chrono::high_resolution_clock::now();
-        for (const auto& p : packets) listQueue.insert(p);
+        for (const auto& p : packets)
+            listQueue.insert(p);
         end = std::chrono::high_resolution_clock::now();
         long long listInsertTime = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
         start = std::chrono::high_resolution_clock::now();
-        while (!heapQueue.empty()) heapQueue.pop();
+        while (!heapQueue.empty())
+            heapQueue.pop();
         end = std::chrono::high_resolution_clock::now();
         long long heapPopTime = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
         start = std::chrono::high_resolution_clock::now();
-        while (!listQueue.empty()) listQueue.pop();
+        while (!listQueue.empty())
+            listQueue.pop();
         end = std::chrono::high_resolution_clock::now();
         long long listPopTime = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 

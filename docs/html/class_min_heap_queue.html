@@ -136,6 +136,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2306ca11b461d4a662e7251e8246856b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera najważniejszy pakiet z kolejki bez jego usuwania.  <br /></td></tr>
 <tr class="memitem:a97fbb37e79fd594eb75cba64406637be" id="r_a97fbb37e79fd594eb75cba64406637be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a97fbb37e79fd594eb75cba64406637be">increaseKey</a> (int index, int newPrio)</td></tr>
 <tr class="memdesc:a97fbb37e79fd594eb75cba64406637be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia priorytet wybranego indeksu na nowy.  <br /></td></tr>
+<tr class="memitem:aa9b9f6d32a98d54ff4725fbc1043f952" id="r_aa9b9f6d32a98d54ff4725fbc1043f952"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa9b9f6d32a98d54ff4725fbc1043f952">printTree</a> (int index=0, int level=0) const</td></tr>
+<tr class="memdesc:aa9b9f6d32a98d54ff4725fbc1043f952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyswietla aktualny stan kopca w formie poziomego drzewa w konsoli. Korzen znajduje sie z lewej strony ekranu, a kolejne poziomy sa odsuwane w prawo. Metoda dziala rekurencyjnie, wypisujac najpierw prawe poddrzewo, potem wezel, a na koncu lewe.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Klasa symulująca kolejkę priorytetową dla mechanizmów QoS. </p>
@@ -285,8 +287,47 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="aa9b9f6d32a98d54ff4725fbc1043f952" name="aa9b9f6d32a98d54ff4725fbc1043f952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b9f6d32a98d54ff4725fbc1043f952">&#9670;&#160;</a></span>printTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MinHeapQueue::printTree </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>level</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wyswietla aktualny stan kopca w formie poziomego drzewa w konsoli. Korzen znajduje sie z lewej strony ekranu, a kolejne poziomy sa odsuwane w prawo. Metoda dziala rekurencyjnie, wypisujac najpierw prawe poddrzewo, potem wezel, a na koncu lewe. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Indeks obecnego wezla w wektorze (domyslnie 0 - korzen). </td></tr>
+    <tr><td class="paramname">level</td><td>Aktualny poziom zaglebienia w drzewie, sluzacy do obliczania wciec (domyslnie 0). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_min_heap_queue_8h_source.html">MinHeapQueue.h</a></li>
+<li>src/<a class="el" href="_min_heap_queue_8cpp.html">MinHeapQueue.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

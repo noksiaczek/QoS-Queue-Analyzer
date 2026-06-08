@@ -1,3 +1,5 @@
+# Plik stworzylem z ogromna pomoca sztucznej inteligencji, bo nie znam pythona zbytnio
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
